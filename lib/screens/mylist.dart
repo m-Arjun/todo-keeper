@@ -17,17 +17,15 @@ class _MyListState extends State<MyList> {
         centerTitle: true,
       ),
       body: _listview(),
-
       floatingActionButton: FloatingActionButton(
-        onPressed: (){
-            setState(() {
-              
-            });
-          },
+        onPressed: () {
+          setState(() {
+            navigatetodata('Add Data');
+          });
+        },
         tooltip: 'add',
         child: Icon(Icons.add),
-        
-        ),
+      ),
     );
   }
 
@@ -40,10 +38,7 @@ class _MyListState extends State<MyList> {
           elevation: 6.0,
           child: ListTile(
             onTap: () {
-              print("tapped card");
-            },
-            onLongPress: () {
-              print("long tapped card");
+              navigatetodata('Edit data');
             },
             leading: CircleAvatar(),
             title: Text('Titile'),
@@ -53,5 +48,11 @@ class _MyListState extends State<MyList> {
         );
       },
     );
+  }
+
+  void navigatetodata(String title) {
+    Navigator.push(context, MaterialPageRoute(builder: (context) {
+      return Newdata(title);
+    }));
   }
 }

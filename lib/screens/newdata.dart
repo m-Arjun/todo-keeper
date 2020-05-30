@@ -1,11 +1,16 @@
 import 'package:flutter/material.dart';
 
 class Newdata extends StatefulWidget {
+
+  String apptitle="";
+  Newdata(this.apptitle);
   @override
-  _NewdataState createState() => _NewdataState();
+  _NewdataState createState() => _NewdataState(this.apptitle);
 }
 
 class _NewdataState extends State<Newdata> {
+    String apptitle="";
+  _NewdataState(this.apptitle);
   static var prio = ['High', 'low'];
   TextEditingController _title = TextEditingController();
   TextEditingController _desc = TextEditingController();
@@ -14,7 +19,10 @@ class _NewdataState extends State<Newdata> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Add data'),
+        title: Text(apptitle),
+        leading: IconButton(icon: Icon(Icons.arrow_back), onPressed: (){
+          movetolastscreen();
+        }),
       ),
       body: Padding(
         padding: EdgeInsets.fromLTRB(15, 10, 0, 0),
@@ -71,5 +79,9 @@ class _NewdataState extends State<Newdata> {
         ),
       ),
     );
+  }
+
+  void movetolastscreen(){
+    Navigator.pop(context);
   }
 }
