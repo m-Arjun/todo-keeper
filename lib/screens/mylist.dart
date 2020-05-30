@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:todo_keeper/screens/newdata.dart';
 
 class MyList extends StatefulWidget {
   @override
@@ -19,8 +20,10 @@ class _MyListState extends State<MyList> {
 
       floatingActionButton: FloatingActionButton(
         onPressed: (){
-          print('float button');
-        },
+            setState(() {
+              
+            });
+          },
         tooltip: 'add',
         child: Icon(Icons.add),
         
