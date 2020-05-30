@@ -1,5 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:todo_keeper/screens/mylist.dart';
 
 void main() {
-  runApp(null);
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title:'ToDO- Keeper',
+      theme: ThemeData(
+        brightness: Brightness.dark,
+        primaryColor: Colors.indigo,
+
+      ),
+      home:MyList(),
+    );
+  }
 }
