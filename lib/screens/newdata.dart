@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class newdata extends StatefulWidget {
+class Newdata extends StatefulWidget {
   @override
-  _newdataState createState() => _newdataState();
+  _NewdataState createState() => _NewdataState();
 }
 
-class _newdataState extends State<newdata> {
+class _NewdataState extends State<Newdata> {
   static var prio = ['High', 'low'];
   TextEditingController _title = TextEditingController();
   TextEditingController _desc = TextEditingController();

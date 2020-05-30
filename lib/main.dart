@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
         primaryColor: Colors.indigo,
 
       ),
-      home:newdata(),
+      home:Newdata(),
     );
   }
 }
